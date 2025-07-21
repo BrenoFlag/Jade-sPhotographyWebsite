@@ -24,12 +24,21 @@ permalink: "/motorsport/"
         </div>
     </div>
     <!--Background Image-->
+
     <picture class="cs-background">
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/assets/images/chicagoLake.JPG">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/assets/images/chicagoLake.JPG">
-        <img decoding="async" src="/assets/images/chicagoLake.JPG" alt="people laughing" width="1280" height="568" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 640, height: 728})  | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 640, height: 728}) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 640, height: 728}) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 1202, height: 728}) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 1202, height: 728}) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 1202, height: 728}) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 1824 , height: 870 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 1824 , height: 870 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width: 1824 , height: 870 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl '/assets/images/JPG/chicagoLake.JPG' | resize({ width:1280 , height: 568}) | jpeg %}" alt="library" width="1280 " height="568 " loading="eager" decoding="async">
     </picture>
     <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
@@ -49,70 +58,181 @@ permalink: "/motorsport/"
         <div class="cs-grid">
             <!--In order from top left to top right, then bottom left to bototm right-->
             <!--Picture 1-->
-            <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/corneringBikes.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/corneringBikes.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/corneringBikes.JPG" alt="gallery image" width="424" height="190">
+
+            <picture class="cs-picture cs-picture1 ">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 498, height: 168 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 498, height: 168 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/image s/JPG/corneringBikes.JPG' | resize({ width: 498, height: 168 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width:781 , height: 262 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width:781 , height: 262 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width:781 , height: 262 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 424, height: 190 }) | jpeg %}" alt="library" width=" 424" height="190 " loading="lazy" decoding="async">
             </picture>
             <!--Picture 2-->
-            <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/sunsetBike.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/sunsetBike.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/sunsetBike.JPG" alt="gallery image" width="571" height="390">
+            <picture class="cs-picture cs-picture2 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:376, height:210 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:376, height:210 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:376, height:210 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 750 , height:534}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 750 , height:534}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 750 , height:534}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 662 , height: 478 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 662 , height: 478 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 662 , height: 478 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:571, height: 390 }) | jpeg %}" alt="library" width="571" height="390" loading="lazy" decoding="async">
             </picture>
             <!--Picture 3-->
-            <picture class="cs-picture cs-picture3">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/blackPorsche.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/blackPorsche.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/blackPorsche.JPG" alt="gallery image" width="268" height="190">
+
+            <picture class="cs-picture cs-picture3 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width:176, height:93 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width:176, height:93 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width:176, height:93 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width: 216 , height: 114}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width: 216 , height: 114}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width: 216 , height: 114}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width: 316 , height: 223 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width: 316 , height: 223 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blackPorsche.jpg' | resize({ width: 316 , height: 223 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/blackPorsche.JPG' | resize({ width:268, height: 190 }) | jpeg %}" alt="library" width="268" height="190" loading="lazy" decoding="async">
             </picture>
             <!--Picture 4-->
-            <picture class="cs-picture cs-picture4">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/burnOut.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/burnOut.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/burnOut.JPG" alt="gallery image" width="268" height="190">
+
+            <picture class="cs-picture cs-picture4 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width:276, height:93 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width:276, height:93 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width:276, height:93 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width: 557 , height: 254}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width: 557 , height: 254}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width: 557 , height: 254}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width: 316 , height: 223 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width: 316 , height: 223 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width: 316 , height: 223 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/burnOut.JPG' | resize({ width:268, height: 190 }) | jpeg %}" alt="library" width="268" height="190" loading="lazy" decoding="async">
             </picture>
             <!--Picture 5-->
-            <picture class="cs-picture cs-picture5">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/wheel.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/wheel.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/wheel.JPG" alt="gallery image" width="268" height="390">
+
+            <picture class="cs-picture cs-picture5 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width:276, height:210 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width:276, height:210 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width:276, height:210 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width: 556 , height: 534}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width: 556 , height: 534}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width: 556 , height: 534}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width: 499 , height: 681 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width: 499 , height: 681 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width: 499 , height: 681 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/wheel.JPG' | resize({ width:268, height: 190 }) | jpeg %}" alt="library" width="268" height="390" loading="lazy" decoding="async">
             </picture>
             <!--Picture 6-->
-            <picture class="cs-picture cs-picture6">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/ninjas.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/ninjas.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/ninjas.JPG" alt="gallery image" width="425" height="390">
+
+            <picture class="cs-picture cs-picture6 ">
+               <!--Desktop Image-->
+                <source  srcset="{% getUrl '/assets/images/JPG/ninjas.JPG' | resize({ width: 662 , height: 479 }) | avif %}" type="image/avif">
+                <source  srcset="{% getUrl '/assets/images/JPG/ninjas.JPG' | resize({ width: 662 , height: 479 }) | webp %}" type="image/webp">
+                <source  srcset="{% getUrl '/assets/images/JPG/ninjas.JPG' | resize({ width: 662 , height: 479 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/ninjas.JPG' | resize({ width:425, height: 390 }) | jpeg %}" alt="library" width="425" height="390" loading="lazy" decoding="async">
             </picture>
             <!--Picture 7-->
-            <picture class="cs-picture cs-picture7">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/frontBike.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/frontBike.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/frontBike.JPG" alt="gallery image" width="273" height="190">
+
+            <picture class="cs-picture cs-picture7 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width:176, height:93 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width:176, height:93 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width:176, height:93 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width: 363 , height: 255}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width: 363 , height: 255}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width: 363 , height: 255}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width: 315 , height: 223 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width: 315 , height: 223 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width: 315 , height: 223 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/frontBike.JPG' | resize({ width:273, height: 190 }) | jpeg %}" alt="library" width="273" height="190" loading="lazy" decoding="async">
             </picture>
             <!--Picture 8-->
-            <picture class="cs-picture cs-picture8">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/blure.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/blure.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/blure.JPG" alt="gallery image" width="273" height="190">
+
+            <picture class="cs-picture cs-picture8 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width:176, height:93 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width:176, height:93 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width:176, height:93 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width: 363 , height: 255}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width: 363 , height: 255}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width: 363 , height: 255}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width: 315 , height: 213 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width: 315 , height: 213 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width: 315 , height: 213 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/blure.JPG' | resize({ width:273, height: 190 }) | jpeg %}" alt="library" width="273" height="190" loading="lazy" decoding="async">
             </picture>
             <!--Picture 9-->
-            <picture class="cs-picture cs-picture9">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/JadeOnTopOfCar.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/JadeOnTopOfCar.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/JadeOnTopOfCar.JPG" alt="gallery image" width="268" height="390">
+
+            <picture class="cs-picture cs-picture9 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width:176, height:210 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width:176, height:210 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width:176, height:210 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width: 363 , height: 534}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width: 363 , height: 534}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width: 363 , height: 534}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width: 313 , height: 478 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width: 313 , height: 478 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width: 313 , height: 478 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/JadeOnTopOfCar.JPG' | resize({ width:268, height: 390 }) | jpeg %}" alt="library" width="268" height="390" loading="lazy" decoding="async">
             </picture>
             <!--Picture 10-->
+
             <picture class="cs-picture cs-picture10">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/greenPorsche.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/greenPorsche.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/greenPorsche.JPG" alt="gallery image" width="268" height="390">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width:276, height:210 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width:276, height:210 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width:276, height:210 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width: 556 , height: 534}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width: 556 , height: 534}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width: 556 , height: 534}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width: 316 , height: 478 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width: 316 , height: 478 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width: 316 , height: 478 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/greenPorsche.JPG' | resize({ width:268, height: 390 }) | jpeg %}" alt="library" width="268" height="390" loading="lazy" decoding="async">
             </picture>
             <!--Picture 11-->
             <picture class="cs-picture cs-picture11">
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/corneringBikes.JPG">
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/corneringBikes.JPG">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/corneringBikes.JPG" alt="gallery image" width="268" height="190">
+                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/corneringBikes-m.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/corneringBikes-m.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/corneringBikes-m.webp" alt="gallery image" width="268" height="190">
+            </picture>
+            <picture class="cs-picture cs-picture11 ">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width:276, height:94 })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width:276, height:94 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width:276, height:94 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 556 , height: 256}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 556 , height: 256}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 556 , height: 256}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 316 , height: 478 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 316 , height: 478 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width: 316 , height: 478 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl '/assets/images/JPG/corneringBikes.JPG' | resize({ width:268, height: 190 }) | jpeg %}" alt="library" width="268" height="190" loading="lazy" decoding="async">
             </picture>
         </div>
     </div>
