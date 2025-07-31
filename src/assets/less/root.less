@@ -13,15 +13,21 @@
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
+        --background: #F8F8F8;
+        --primaryAccent: #005F60;
+        --secondaryAccent: #D4AF37;
         --primary: #134AB9;
         --primaryLight: #5a80ce;
         --secondary: #FD632EFF;
         --secondaryLight: #fc8f60;
-        --headerColor: #0d3482;
-        --bodyTextColor: #4e4b66;
-        --bodyTextColorWhite: #fafbfc;
+        --headerColor: #333333;
+        --bodyTextColor: #333333;
+        --bodyTextColorWhite: #E0E0E0;
 
         /* Dark Mode Styles */
+        --darkBackground: #1F1F1F;
+        --darkPrimaryAccent: #00A3A3;
+        --darkSecondaryAccent: #D4AF37;
         --dark: #040f25;
         --medium: #081e4a;
         --accent: #0f3b94;
@@ -68,7 +74,7 @@
         text-align: inherit;
         letter-spacing: 0.1em;
         font-weight: 700;
-        color: var(--primary);
+        color: var(--secondaryAccent);
         margin-bottom: 0.25rem;
         display: block;
     }
@@ -111,7 +117,7 @@
         z-index: 1;
         position: relative;
         display: inline-block;
-        background-color: var(--primary);
+        background-color: var(--primaryAccent);
         width: auto;
         padding: (16/16rem) (32/16rem);
         text-decoration: none;
@@ -144,7 +150,6 @@
             content: "";
             opacity: 1;
             display: block;
-            background-color: #000;
             height: 100%;
 
             //Transition properties
@@ -188,7 +193,7 @@
             content: "";
             opacity: 1;
             display: block;
-            background-color: #000;
+
             height: 100%;
 
             //Transition properties
@@ -199,7 +204,7 @@
 
     // Utilities - small classes useful in various common situations
     .cs-color {
-        color: var(--primary);
+        color: var(--primaryAccent);
     }
 
     .cs-bold {
@@ -269,7 +274,7 @@
         color: var(--bodyTextColor);
 
         a {
-            color: var(--primary);
+            color: var(--primaryAccent);
         }
     }
 
@@ -541,7 +546,7 @@
             width: (56/16rem);
             height: (56/16rem);
             margin: 0 0 0 auto;
-            background-color: var(--primary);
+            background-color: var(--primaryAccent);
             border: none;
             border-radius: (8/16rem);
             display: flex;
@@ -666,7 +671,7 @@
             }
 
             .cs-toggle {
-                background-color: var(--primary);
+                background-color: var(--primaryAccent);
             }
 
             .cs-line {
@@ -798,11 +803,11 @@
             position: relative;
 
             &.cs-active {
-                color: var(--primary);
+                color: var(--secondaryAccent);
             }
 
             &:hover {
-                color: var(--primary);
+                color: var(--secondaryAccent);
             }
         }
     }
@@ -861,7 +866,7 @@
             height: 0;
             margin: 0;
             padding: 0;
-            background-color: var(--primary);
+            background-color: var(--primaryAccent);
             border-radius: (16/16rem);
             overflow: hidden;
             opacity: 0;
@@ -882,7 +887,7 @@
             &.cs-drop-link {
                 /* 14px - 16px */
                 font-size: clamp(0.875rem, 2vw, 1.25rem);
-                color: #fff;
+                color: var(--bodyTextColorWhite);
             }
         }
     }
@@ -918,12 +923,12 @@
             min-width: (200/16rem);
             margin: 0;
             padding: 0;
-            background-color: #08101a;
+            background-color: var(--primaryAccent);
             overflow: hidden;
             opacity: 0;
             visibility: hidden;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
-            border-bottom: 5px solid var(--primary);
+            border-bottom: 5px solid var(--secondaryAccent);
             border-radius: 0 0 (16/16rem) (16/16rem);
             /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
             // columns: 2;
@@ -1003,7 +1008,7 @@
                 transition: color .3s, background-color .3s;
 
                 &:hover {
-                    background-color: var(--primary);
+                    background-color: var(--secondaryAccent);
                     color: #1a1a1a;
                 }
 
@@ -1121,17 +1126,17 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            color: #fff;
+            color: var(--bodyTextColorWhite);
             display: block;
             position: relative;
             transition: color 0.3s;
 
             &:hover {
-                color: var(--primary);
+                color: var(--secondaryAccent);
             }
 
             &.cs-active {
-                color: var(--primary);
+                color: var(--secondaryAccent);
             }
         }
 
@@ -1150,7 +1155,7 @@
             transition: background-color .3s, color .3s;
 
             &:hover {
-                background-color: #fff;
+                background-color: var(--secondaryAccent);
                 color: var(--headerColor);
             }
         }
@@ -1269,7 +1274,7 @@
             }
 
             &.cs-active {
-                color: var(--primary);
+                color: var(--primaryAccent);
             }
         }
         .cs-background-about, .cs-background, .cs-background-contact {
@@ -1307,7 +1312,7 @@
         }
 
         .cs-mask {
-            --maskBG: #ffffff;
+            --maskBG: var(--background);
 
             width: 100%;
             height: auto;
@@ -1377,7 +1382,7 @@
 @media only screen and (min-width: 0rem) {
     #cta-1693 {
         padding: var(--sectionPadding);
-        background-color: var(--primary);
+        background-color: var(--primaryAccent);
         position: relative;
         overflow: hidden;
 
@@ -1422,7 +1427,7 @@
             box-sizing: border-box;
             padding: 0 (24/16rem);
             color: #fff;
-            background-color: var(--secondary);
+            background-color: var(--secondaryAccent);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -1573,7 +1578,7 @@
             transition: transform 0.3s, background-color 0.3s;
 
             &:hover {
-                background-color: #1a1a1a;
+                background-color: (var(--secondaryAccent));
                 transform: translateY(-0.1875rem);
             }
         }
@@ -1610,7 +1615,7 @@
                 width: (32/16rem);
                 height: (4/16rem);
                 margin: (16/16rem) auto (24/16rem) 0;
-                background: var(--primary);
+                background: var(--primaryAccent);
                 opacity: 1;
                 position: relative;
                 display: block;
@@ -1639,7 +1644,7 @@
             }
 
             &:hover {
-                color: #00c7fc;
+                color: var(--secondaryAccent);
                 &:before {
                     width: 100%;
                 }
@@ -1670,7 +1675,7 @@
             display: inline-block;
 
             &:hover {
-                color: #00c7fc;
+                color: var(--secondaryAccent);
                 text-decoration: underline;
             }
         }

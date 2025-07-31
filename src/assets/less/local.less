@@ -13,7 +13,7 @@
 @media only screen and (min-width: 0rem) {
     #sbsr-2217 {
         padding: var(--sectionPadding);
-        background-color: #FDFAF8;
+        background-color: var(--background);
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -114,7 +114,7 @@
                 content: "";
                 width: (358/16em);
                 height: auto;
-                background: var(--secondary);
+                background: var(--primaryAccent);
                 opacity: 0.2;
                 display: block;
                 position: absolute;
@@ -140,7 +140,7 @@
         .cs-picture1 {
             width: (305/16em);
             height: auto;
-            border: 4px solid #FFFFFF;
+            border: 3px solid var(--secondaryAccent);
             top: 0;
             bottom: (281/16em);
             left: 0;
@@ -149,7 +149,7 @@
         .cs-picture2 {
             width: (413/16em);
             height: auto;
-            border: 4px solid #FFFFFF;
+            border: 4px solid var(--secondaryAccent);
             top: (271/16em);
             right: 0;
             bottom: 0;
@@ -158,6 +158,7 @@
         .cs-picture3 {
             width: (218/16em);
             height: (155/16em);
+            border: 2px solid var(--secondaryAccent);
             top: (84/16em);
             right: (75/16em);
         }
@@ -185,7 +186,7 @@
             /* prevents padding from adding to the width */
             box-sizing: border-box;
             padding: 0 (24/16rem);
-            background-color: var(--primary);
+            background-color: var(--secondaryAccent);
             color: #fff;
             display: inline-block;
             position: relative;
@@ -267,48 +268,6 @@
 }
 
 /*-- -------------------------- -->
-<---    Side By Side Reverse    -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #RPsbsr-313 {
-        background-color: #f7f7f7;
-        .cs-picture1 {
-            left: auto;
-            right: 0;
-        }
-
-        .cs-picture2 {
-            right: auto;
-            left: 0;
-        }
-
-        .cs-quote {
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #RPsbsr-313 {
-        .cs-image-group {
-            /* sends it to the right in the 2nd position */
-            order: 2;
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #RPsbsr-313 {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-    }
-}
-/*-- -------------------------- -->
 <---           Steps            -->
 <--- -------------------------- -*/
 
@@ -316,7 +275,7 @@
 @media only screen and (min-width: 0rem) {
     #steps-1174 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--background);
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -353,13 +312,9 @@
             color: var(--bodyTextColor);
         }
 
-        .cs-topper {
-            color: var(--secondary);
-        }
-
         .cs-title,
         .cs-text {
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
         }
 
         .cs-text {
@@ -418,7 +373,7 @@
             margin-bottom: (24/16rem);
             width: (88/16rem);
             height: (88/16rem);
-            border: 1px solid rgba(255, 252, 243, 0.5);
+            border: 1px solid var(--primaryAccent);
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -436,7 +391,7 @@
             line-height: 1.2em;
             text-align: inherit;
             margin: 0 0 (12/16rem) 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
         }
 
         .cs-item-p {
@@ -445,7 +400,7 @@
             text-align: inherit;
             max-width: (342/16rem);
             margin: 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
             opacity: 0.8;
         }
 
@@ -510,6 +465,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #gallery-1716 {
+        background-color: var(--background);
         padding: var(--sectionPadding);
         position: relative;
         z-index: 1;
@@ -547,7 +503,7 @@
                     content: '';
                     width: 100%;
                     height: 80%;
-                    background: var(--primary);
+                    background: var(--secondaryAccent);
                     opacity: .1;
                     position: absolute;
                     display: block;
@@ -569,7 +525,7 @@
             color: #fff;
             min-width: (150/16rem);
             padding: 0 (24/16rem);
-            background-color: var(--primary);
+            background-color: var(--secondaryAccent);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -629,6 +585,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #gallery-1716 {
+
         .cs-container {
             flex-direction: row;
             justify-content: space-between;
@@ -641,7 +598,7 @@
             padding-bottom: clamp(2rem, 7vw, 4rem);
         }
 
-        .cs-text {
+        .cs-text, .cs-header {
             &:last-of-type {
                 /* add position relative so the colored rectangle is now absolutely positioned to the cs-text parent. We also only want these styles on the last paragraph tag */
                 position: relative;

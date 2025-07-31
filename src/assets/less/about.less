@@ -13,7 +13,7 @@
 @media only screen and (min-width: 0rem) {
     #sbsr-2217 {
         padding: var(--sectionPadding);
-        background-color: #FDFAF8;
+        background-color: var(--background);
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -114,7 +114,7 @@
                 content: "";
                 width: (358/16em);
                 height: auto;
-                background: var(--secondary);
+                background: var(--primaryAccent);
                 opacity: 0.2;
                 display: block;
                 position: absolute;
@@ -140,7 +140,7 @@
         .cs-picture1 {
             width: (305/16em);
             height: auto;
-            border: 4px solid #FFFFFF;
+            border: 3px solid var(--secondaryAccent);
             top: 0;
             bottom: (281/16em);
             left: 0;
@@ -149,7 +149,7 @@
         .cs-picture2 {
             width: (413/16em);
             height: auto;
-            border: 4px solid #FFFFFF;
+            border: 4px solid var(--secondaryAccent);
             top: (271/16em);
             right: 0;
             bottom: 0;
@@ -158,6 +158,7 @@
         .cs-picture3 {
             width: (218/16em);
             height: (155/16em);
+            border: 2px solid var(--secondaryAccent);
             top: (84/16em);
             right: (75/16em);
         }
@@ -185,7 +186,7 @@
             /* prevents padding from adding to the width */
             box-sizing: border-box;
             padding: 0 (24/16rem);
-            background-color: var(--primary);
+            background-color: var(--secondaryAccent);
             color: #fff;
             display: inline-block;
             position: relative;
