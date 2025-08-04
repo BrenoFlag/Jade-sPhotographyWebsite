@@ -246,7 +246,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #sbsr-2217 {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: var(--darkBackground);
 
             .cs-title,
             .cs-text,
@@ -453,7 +453,13 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #steps-1174 {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: var(--darkBackground);
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-p{
+                color: var(--bodyTextColorWhite);
+            }
         }
     }
 }
@@ -585,6 +591,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #gallery-1716 {
+        background-color: var(--background);
 
         .cs-container {
             flex-direction: row;
@@ -631,6 +638,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #gallery-1716 {
+            background-color: var(--darkBackground);
             .cs-title, .cs-text {
                 color: var(--bodyTextColorWhite);
             }
@@ -924,6 +932,7 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #reviews-2385 {
+        background-color: var(--darkBackground);
         .cs-container {
             max-width: (1280/16rem);
         }
@@ -943,10 +952,10 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #reviews-2385 {
-            background-color: rgba(0, 0, 0, .2);
+            background-color: var(--darkBackground);
 
             .cs-container {
-                background-color: rgba(0, 0, 0, .2);
+                background-color: var(--darkBackground);
             }
 
             .cs-item, .cs-icon-wrapper {

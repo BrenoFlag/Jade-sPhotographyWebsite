@@ -5,6 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #gallery-434 {
+    background-color: var(--background);
     padding: var(--sectionPadding);
 
     .cs-container {
@@ -192,11 +193,16 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
     #gallery-434 {
+      background-color: var(--darkBackground);
+
       .cs-topper {
-        color: var(--primaryLight);
+        color: var(--secondaryAccent);
       }
 
-      .cs-title {
+      .cs-title,
+      .cs-text,
+      .cs-h3,
+      .cs-li-text {
         color: var(--bodyTextColorWhite);
       }
     }
@@ -211,7 +217,7 @@
 @media only screen and (min-width: 0rem) {
   #steps-1174 {
     padding: var(--sectionPadding);
-    background-color: #1a1a1a;
+    background-color: var(--background);
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -248,13 +254,9 @@
       color: var(--bodyTextColor);
     }
 
-    .cs-topper {
-      color: var(--secondary);
-    }
-
     .cs-title,
     .cs-text {
-      color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColor);
     }
 
     .cs-text {
@@ -313,7 +315,7 @@
       margin-bottom: (24/16rem);
       width: (88/16rem);
       height: (88/16rem);
-      border: 1px solid rgba(255, 252, 243, 0.5);
+      border: 1px solid var(--primaryAccent);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -331,7 +333,7 @@
       line-height: 1.2em;
       text-align: inherit;
       margin: 0 0 (12/16rem) 0;
-      color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColor);
     }
 
     .cs-item-p {
@@ -340,7 +342,7 @@
       text-align: inherit;
       max-width: (342/16rem);
       margin: 0;
-      color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColor);
       opacity: 0.8;
     }
 
@@ -393,7 +395,13 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
     #steps-1174 {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: var(--darkBackground);
+      .cs-title,
+      .cs-text,
+      .cs-h3,
+      .cs-item-p{
+        color: var(--bodyTextColorWhite);
+      }
     }
   }
 }

@@ -13,7 +13,7 @@
 @media only screen and (min-width: 0rem) {
   #contact-1694 {
     padding: var(--sectionPadding);
-    background-color: #f7f7f7;
+    background-color: var(--background);
     position: relative;
     z-index: 1;
 
@@ -42,7 +42,7 @@
     }
 
     .cs-topper {
-      color: var(--secondary);
+      color: var(--secondaryAccent);
     }
 
     .cs-title {
@@ -109,7 +109,7 @@
       width: (60/16rem);
       height: (60/16rem);
       margin: 0;
-      border: 1px solid var(--secondary);
+      border: 1px solid var(--secondaryAccent);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -133,7 +133,7 @@
       /* 24px - 48px top and bottom */
       /* 16px - 48px left and right */
       padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
-      background-color: #f7f7f7;
+      background-color: var(--background);
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       flex-wrap: wrap;
@@ -184,7 +184,7 @@
       margin: 0;
       padding: 0 (48/16rem);
       color: #fff;
-      background-color: var(--secondary);
+      background-color: var(--secondaryAccent);
       display: inline-block;
       position: relative;
       z-index: 1;
@@ -313,7 +313,7 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
     #contact-1694 {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: var(--darkBackground);
       .cs-title,
       .cs-text,
       .cs-header,
@@ -325,17 +325,9 @@
         opacity: 0.8;
       }
 
-      .cs-icon-wrapper {
-        border-color: #fff;
-      }
-
-      .cs-icon {
-        /* makes it white */
-        filter: grayscale(1) brightness(1000%);
-      }
 
       .cs-form {
-        background-color: var(--dark);
+        background-color: var(--darkBackground);
         position: relative;
         z-index: 1;
 
@@ -343,7 +335,7 @@
           content: '';
           width: 100%;
           height: 100%;
-          background: rgba(0, 0, 0, .6);
+          background: var(darkBackground);
           opacity: 1;
           position: absolute;
           display: block;
