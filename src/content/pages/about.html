@@ -52,26 +52,40 @@ permalink: "/about/"
             <!--Top left image-->
             <picture class="cs-picture cs-picture1">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/burningRose.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/burningRose.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/burningRose.webp" alt="wedding photoshoot" width="297" height="366">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height:500, position: 'attention' })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height:500, position: 'attention' }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height:500, position: 'attention' }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | jpeg %}" type="image/jpeg">
+                <img loading="eager" decoding="async"  src="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height: 500, position: 'attention' }) | jpeg %}" alt="yellow porsche gt3 and yatch" width="405" height="500">
             </picture>
             <!--Bottom right image-->
             <picture class="cs-picture cs-picture2">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/3jades.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/3jades.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/3jades.webp" alt="photograph of a woman" width="405" height="376">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height:500, position: 'attention' })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height:500, position: 'attention' }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height:500, position: 'attention' }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | jpeg %}" type="image/jpeg">
+                <img loading="lazy" decoding="async"  src="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height: 500, position: 'attention' }) | jpeg %}" alt="yellow porsche gt3 and yatch" width="405" height="500">
             </picture>
+
             <!--Middle image-->
             <picture class="cs-picture cs-picture3">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/burnOut.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/burnOut.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/burnOut.webp" alt="children's birthday" width="218" height="155">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.jpg' | resize({ width:218, height: 225, position: 'bottom' })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.jpg' | resize({ width:218, height: 225, position: 'bottom' }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.jpg' | resize({ width:218, height: 225, position: 'bottom' }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.jpg' | resize({ width: 218 , height: 225, position: 'bottom'}) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.jpg' | resize({ width: 218 , height: 225, position: 'bottom'}) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.jpg' | resize({ width: 218 , height: 225, position: 'bottom'}) | jpeg %}" type="image/jpeg">
+                <img loading="lazy" decoding="async"  src="{% getUrl '/assets/images/JPG/sunsetBike.jpg' | resize({ width:218, height: 225, position: 'bottom' }) | jpeg %}" alt="yellow porsche gt3 and yatch" width="218" height="225">
+
             </picture>
         </div>
         <div class="cs-content">
@@ -104,11 +118,12 @@ permalink: "/about/"
                     </div>
                 </li>
             </ul>
-            <a href="/creative_creation/" class="cs-button-solid">EXPLORE THE PORTFOLIO</a>
+            <a href="/motorsport/" class="cs-button-solid">EXPLORE THE PORTFOLIO</a>
         </div>
     </div>
     <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/leaf11.png" alt="leaf" width="255" height="199" aria-hidden="true">
 </section>
+
 
 
 
