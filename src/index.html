@@ -8,6 +8,15 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% extends "layouts/base.html" %}
 
 {% block head %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBBTRM1LK9"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QBBTRM1LK9');
+</script>
     <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
@@ -51,9 +60,15 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
                     <!-- <video loading="lazy" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/gym.mp4" autoplay="false"></video> -->
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/blackPorsche-m.webp">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/blackPorsche.webp">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/blackPorsche.webp" alt="body builder" width="630" height="877">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/3jades.jpg' | resize({ width:630, height:550, position: 'top' })  | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/3jades.jpg' | resize({ width:630, height:550, position: 'top' }) | webp %}" type="image/webp">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/3jades.jpg' | resize({ width:630, height:550, position: 'top' }) | jpeg %}" type="image/jpeg">
+                        <!--Tablet Image-->
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/3jades.jpg' | resize({ width: 630 , height: 550, position: 'top'}) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/3jades.jpg' | resize({ width: 630 , height: 550, position: 'top'}) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/3jades.jpg' | resize({ width: 630 , height: 550, position: 'top'}) | jpeg %}" type="image/jpeg">
+                        <img loading="eager" decoding="async"  src="{% getUrl '/assets/images/JPG/3jades.jpg' | resize({ width:630, height: 550, position: 'top' }) | jpeg %}" alt="same person edited in as 3" width="630" height="550">
                     </picture>
 
                 </div>
@@ -61,10 +76,14 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         </div>
         <picture class="cs-background">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="/assets/images/heroImg-m.webp">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="/assets/images/heroImg.WebP">
-            <img loading="eager" decoding="async" src="/assets/images/heroImg.WebP" alt="picture" width="1280" height="568">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/Motorcycle.jpg' | resize({ width:1280, height:1200, position: 'attention' })  | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/Motorcycle.jpg' | resize({ width:1280, height:1200, position: 'attention' }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/Motorcycle.jpg' | resize({ width:1280, height:1200, position: 'attention' }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/Motorcycle.jpg' | resize({ width: 1280 , height: 1200, position: 'attention'}) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/Motorcycle.jpg' | resize({ width: 1280 , height: 1200, position: 'attention'}) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/Motorcycle.jpg' | resize({ width: 1280 , height: 1200, position: 'attention'}) | jpeg %}" type="image/jpeg">
+            <img loading="eager" decoding="async"  src="{% getUrl '/assets/images/Motorcycle.jpg' | resize({ width:1280, height: 1200, position: 'attention' }) | jpeg %}" alt="porsche experience atlanta" width="1280" height="1200">
         </picture>
     </div>
 </section>
@@ -134,26 +153,40 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <!--Top left image-->
             <picture class="cs-picture cs-picture1">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/burningRose.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/burningRose.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/burningRose.webp" alt="wedding photoshoot" width="297" height="366">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height:500, position: 'attention' })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height:500, position: 'attention' }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height:500, position: 'attention' }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | jpeg %}" type="image/jpeg">
+                <img loading="eager" decoding="async"  src="{% getUrl '/assets/images/porscheYatch.jpg' | resize({ width:405, height: 500, position: 'attention' }) | jpeg %}" alt="yellow porsche gt3 and yatch" width="405" height="500">
             </picture>
             <!--Bottom right image-->
             <picture class="cs-picture cs-picture2">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/3jades.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/3jades.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/3jades.webp" alt="photograph of a woman" width="405" height="376">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height:500, position: 'attention' })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height:500, position: 'attention' }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height:500, position: 'attention' }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width: 405 , height: 500, position: 'attention'}) | jpeg %}" type="image/jpeg">
+                <img loading="lazy" decoding="async"  src="{% getUrl '/assets/images/yellowPorsche.jpg' | resize({ width:405, height: 500, position: 'attention' }) | jpeg %}" alt="yellow porsche gt3 and yatch" width="405" height="500">
             </picture>
+
             <!--Middle image-->
             <picture class="cs-picture cs-picture3">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/motorsports/burnOut.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/motorsports/burnOut.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/portfolio/motorsports/burnOut.webp" alt="children's birthday" width="218" height="155">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:218, height: 225, position: 'bottom' })  | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:218, height: 225, position: 'bottom' }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:218, height: 225, position: 'bottom' }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 218 , height: 225, position: 'bottom'}) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 218 , height: 225, position: 'bottom'}) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width: 218 , height: 225, position: 'bottom'}) | jpeg %}" type="image/jpeg">
+                <img loading="lazy" decoding="async"  src="{% getUrl '/assets/images/JPG/sunsetBike.JPG' | resize({ width:218, height: 225, position: 'bottom' }) | jpeg %}" alt="yellow porsche gt3 and yatch" width="218" height="225">
+
             </picture>
         </div>
         <div class="cs-content">
@@ -186,7 +219,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     </div>
                 </li>
             </ul>
-            <a href="/creative_creation/" class="cs-button-solid">EXPLORE THE PORTFOLIO</a>
+            <a href="/motorsport/" class="cs-button-solid">EXPLORE THE PORTFOLIO</a>
         </div>
     </div>
     <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/leaf11.png" alt="leaf" width="255" height="199" aria-hidden="true">
@@ -251,7 +284,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <p class="cs-text">
                 A collection of powerful moments, captivating portraits, and dynamic motion. See the quality and creativity that defines Blue-Lens-Photography.
             </p>
-            <a href="/creative_creation/" class="cs-button-solid">View All</a>
+            <a href="/creative_creation/" class="cs-button-solid">EXPLORE THE PORTFOLIO</a>
         </div>
         <div class="cs-gallery">
             <picture class="cs-picture">
