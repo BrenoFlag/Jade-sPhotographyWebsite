@@ -8,6 +8,43 @@
     background-color: var(--background);
     padding: var(--sectionPadding);
 
+    .cs-button-solid {
+      font-size: (16/16rem);
+      font-weight: 700;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-align: center;
+      text-decoration: none;
+      min-width: (150/16rem);
+      margin: 0;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+      padding: 0 (24/16rem);
+      background-color: var(--secondaryAccent);
+      color: #fff;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: #000;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
     .cs-container {
       width: 100%;
       margin: auto;
@@ -283,42 +320,51 @@
     .cs-row-1 {
       .cs-picture-1 {
         height: (567/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
 
       .cs-picture-2 {
         height: (629/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
 
       .cs-picture-3 {
         height: (512/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
     }
 
     .cs-row-2 {
       .cs-picture-1 {
         height: (492/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
 
       .cs-picture-2 {
         height: (517/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
 
       .cs-picture-3 {
         height: (629/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
     }
 
     .cs-row-3 {
       .cs-picture-1 {
         height: (625/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
 
       .cs-picture-2 {
         height: (452/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
 
       .cs-picture-3 {
         height: (629/16em);
+        border: 1.5px solid var(--secondaryAccent);
       }
     }
 
@@ -397,6 +443,44 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+
+    .cs-button-solid {
+      font-size: (16/16rem);
+      font-weight: 700;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-align: center;
+      text-decoration: none;
+      min-width: (150/16rem);
+      margin: 0;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+      padding: 0 (24/16rem);
+      background-color: var(--secondaryAccent);
+      color: #fff;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: #000;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
 
     .cs-container {
       width: 100%;
@@ -497,6 +581,7 @@
       justify-content: center;
       align-items: center;
     }
+
 
     .cs-icon {
       width: (40/16rem);
